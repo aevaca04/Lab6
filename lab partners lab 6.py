@@ -19,6 +19,8 @@ def encode(decoded):
     return empty_str
 
 
+# this is encode defintion
+
 def decode(encoded):  # this is done by partner Alexis
     decode_encoded = ""
     for num in encoded:
@@ -29,17 +31,23 @@ def decode(encoded):  # this is done by partner Alexis
 def main():
     encoder = True
     menu()
+    encoded_password = 0
+    decode_encoded = 0
     while encoder == True:
         user_option = int(input("Please enter an option: "))
         if user_option == 1:
             original_pass = input("Please enter your password to encode: ")
-            encoded_password = encode(origial_pass)
+            encoded_password = encode(original_pass)
             print("Your password has been encoded and stored!")
             menu()
         if user_option == 2:
-            print(
-                f"The encoded password is {encoded_password}, and the original password is {decoded_pass}.")  # decoded_pass is not a thing yet
+            print(f"The encoded password is {encoded_password}, and the original password is {decode_encoded}.")
             menu()
+        if user_option == 3:
+            break
+
+
+# this is an while loop for menu option
 
 
 if __name__ == '__main__':
