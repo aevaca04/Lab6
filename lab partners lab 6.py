@@ -2,7 +2,7 @@ def menu():
     print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit \n")
 
 
-def encode(decoded):
+def encode(decoded): #done by partner Aleli, encodes password inputted by user
     empty_str = ""
     for i in decoded:
         if i == "7":
@@ -18,21 +18,16 @@ def encode(decoded):
         empty_str += i
     return empty_str
 
-
-# this is encode defintion
-
-def decode(encoded):  # this is done by partner Alexis
+def decode(encoded):  # this is done by partner Alexis, returns string of decoded password which is the same as the original
     decode_encoded = ""
     for num in encoded:
         decode_encoded = decode_encoded + str((int(num) - 3) % 10)
         return decode_encoded
 
 
-def main():
+def main(): # defined main function that utilizes Aleli's encode function and Alexis' decode function
     encoder = True
     menu()
-    encoded_password = 0
-    decode_encoded = 0
     while encoder == True:
         user_option = int(input("Please enter an option: "))
         if user_option == 1:
@@ -41,13 +36,14 @@ def main():
             print("Your password has been encoded and stored!")
             menu()
         if user_option == 2:
-            print(f"The encoded password is {encoded_password}, and the original password is {decode_encoded}.")
+            decoded_pass = decode(encoded_password)
+            print(f"The encoded password is {encoded_password}, and the original password is {decoded_pass}.")
             menu()
         if user_option == 3:
             break
 
-
-# this is an while loop for menu option
+# decoded function does not quite work just yet
+# this is a while loop for menu option
 
 
 if __name__ == '__main__':
