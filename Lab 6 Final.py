@@ -17,8 +17,12 @@ def encode(decoded):
         empty_str += i
     return empty_str
 
-def decode(encoded):
-    pass
+def decode(encoded):  # this is encode defintion  # this is done by partner Alexis
+        decode_encoded = ""
+        for num in encoded:
+            decode_encoded = decode_encoded + str((int(num) - 3) % 10)
+            return decode_encoded
+
 
 def main():
     encoder = True
