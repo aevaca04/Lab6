@@ -37,7 +37,7 @@ def main():
         if user_option == 2:
             decoded_password = decode(encoded_password)
             print(f"The encoded password is {encoded_password}, and the original password is {decoded_password}.")
-            menu()
+            menu()  # prints menu
         if user_option == 3:
             encoder = False
 if __name__ == '__main__':
